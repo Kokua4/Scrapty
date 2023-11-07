@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    background-position: center;
+    background-size: cover;
+}
+.logo{
+    width: 10px;
+}
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    position: absolute;
+    top: 60px;
+    right: 160px;
+    font-size: 2em;
+    color: black;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #000;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: black;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: black;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    color: #fff;
+    background: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    position: absolute;
+    top: 360px;
+    right: 90px;
+    font-size: .9em;
+    color: black;
+    margin: 25px 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    color: black;
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span {
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0px;
+    transition: all 0.5s ease;
+}
+
+/* Responsivo para pantallas de PC */
+
+@media (max-width: 1200px) {
+    .form-box {
+        width: 350px;
+    }
+    h2 {
+        top: 50px;
+        right: 140px;
+        font-size: 1.8em;
+    }
+    .inputbox {
+        width: 280px;
+    }
+    .register {
+        top: 330px;
+        right: 70px;
+    }
+}
+@media (max-width: 992px) {
+    .form-box {
+        width: 280px;
+    }
+    h2 {
+        top: 60px;
+        right: 110px;
+        font-size: 1.5em;
+    }
+    .inputbox {
+        width: 220px;
+    }
+    .register {
+        top: 350px;
+        right: 25px;
+    }
+}
