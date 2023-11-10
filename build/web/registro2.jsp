@@ -1,3 +1,4 @@
+<%@page import="conexion.conectadita"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
 <%
@@ -12,8 +13,10 @@
         // Cargar el driver de MySQL
         Class.forName("com.mysql.jdbc.Driver");
         // Conectar a la base de datos MySQL "mydatabase"
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kokua?autoReconnect=true&useSSL=false", "root", "n0m3l0");
-
+            ResultSet results = null;
+            PreparedStatement pst = null;
+            conectadita conecta = new conectadita();
+            con = conecta.getConnection();
         // Crear la sentencia preparada SQL
         String query = "INSERT INTO publicoG (nombrePG, contraseña, correoPG) VALUES (?, ?, ?)";
         ps = con.prepareStatement(query);
