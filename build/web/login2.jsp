@@ -65,6 +65,7 @@
     } finally {
         // Cerrar la conexión, la sentencia preparada y el resultado
         try {
+
             if (rs != null) {
                 rs.close();
             }
