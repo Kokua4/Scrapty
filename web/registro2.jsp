@@ -11,12 +11,12 @@
 
     try {
         // Cargar el driver de MySQL
-        Class.forName("com.mysql.jdbc.Driver");
+        
         // Conectar a la base de datos MySQL "mydatabase"
             ResultSet results = null;
             PreparedStatement pst = null;
             conectadita conecta = new conectadita();
-            con = conecta.getConnection();
+            con = conecta.getConnection( request.getServerName( ) );
         // Crear la sentencia preparada SQL
         String query = "INSERT INTO publicoG (nombrePG, contraseña, correoPG) VALUES (?, ?, ?)";
         ps = con.prepareStatement(query);
@@ -39,10 +39,8 @@
     } catch (SQLException e) {
     // Mostrar el mensaje de error SQL
         out.println("<p>Error SQL: " + e.getMessage() + "</p>");
-    } catch (ClassNotFoundException e) {
-    // Mostrar el mensaje de error de clase no encontrada
-        out.println("<p>Clase no encontrada: " + e.getMessage() + "</p>");
-    } finally {
+    }
+    finally {
     // Cerrar la conexión y la sentencia preparada
         try {
             if (ps != null) {

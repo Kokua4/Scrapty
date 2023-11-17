@@ -5,7 +5,7 @@
 
 <%
     String nombrePG = request.getParameter("user");
-    String contraseña = request.getParameter("password");
+    String contrasena = request.getParameter("password");
     //String usuarioAdmin = request.getParameter("user");
     Connection con = null;
     //String contraseniaAdmin = request.getParameter("password");
@@ -15,17 +15,16 @@
     //ResultSet rs2 = null;
 
     try {
-        // Cargar el driver de MySQL
-        Class.forName("com.mysql.jdbc.Driver");
+        
         // Conectar a la base de datos MySQL "kokua"
         conectadita conecta = new conectadita();
-        con = conecta.getConnection();
+        con = conecta.getConnection( request.getServerName( ) );
         // Crear la sentencia preparada SQL para buscar un usuario con el nombre y contraseña especificados
         String query = "SELECT * FROM publicoG WHERE nombrePG = ? AND contraseña = ?";
         //String query2 = "SELECT * FROM adminstrador WHERE nomAdmin = ? AND contraAdmin = ?";
         ps = con.prepareStatement(query);
         ps.setString(1, nombrePG);
-        ps.setString(2, contraseña);
+        ps.setString(2, contrasena);
         //ps = con.prepareStatement(query2);
         //ps.setString(1, usuarioAdmin);
         //ps.setString(2, contraseniaAdmin);
@@ -59,10 +58,8 @@
     } catch (SQLException e) {
         // Mostrar el mensaje de error SQL
         out.println("<p>Error SQL: " + e.getMessage() + "</p>");
-    } catch (ClassNotFoundException e) {
-        // Mostrar el mensaje de error de clase no encontrada
-        out.println("<p>Clase no encontrada: " + e.getMessage() + "</p>");
-    } finally {
+    } 
+    finally {
         // Cerrar la conexión, la sentencia preparada y el resultado
         try {
 

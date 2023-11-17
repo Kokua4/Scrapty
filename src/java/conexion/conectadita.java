@@ -8,6 +8,7 @@ import java.sql.SQLException;
 public class conectadita implements Serializable{
     public static String user = "root";
     public static String password = "1234";
+    public static String password1 = "n0m3l0";
     public static String db = "kokua";
     public static String port = "3306";
 
@@ -51,9 +52,16 @@ public class conectadita implements Serializable{
         return null;
     }
 
-    public Connection getConnection() 
+    public Connection getConnection( String url) 
     {
-        return getConnection(user, password, db, "localhost");
+        if( url != null )
+        {
+            if( url.contains(".gerdoc." ) )
+            {
+                return getConnection(user, password, db, "localhost");
+            }
+        }
+        return getConnection(user, password1, db, "localhost");
     }
 
     public void closeConnection(Connection connection) 
