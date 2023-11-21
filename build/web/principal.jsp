@@ -1,9 +1,3 @@
-<%-- 
-    Document   : principal
-    Created on : 7 nov. 2023, 12:31:22
-    Author     : Alumno
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -25,11 +19,28 @@
         <div class="column-left">
             <h1 class="center-title">¡Elige que estudiarás hoy!</h1>
         </div>
-        <div class="img-ort">
-            <img src="IMAGENES/ortografía.png" alt="">
+        <div class="sec-2">
+            <div class="img-braille">
+                <a href="index.html">
+                    <img src="IMAGENES/braille.png" alt="">
+                </a>
+            </div>
+            <div class="img-brai">
+                <img src="IMAGENES/braillesito.png" alt="">
+            </div>
         </div>
-        <div class="img-braille">
-            <img src="IMAGENES/braille.png" alt="">
+        <div class="sec-1">
+            <div class="img-ort">
+                <a href="principalNivel.jsp">
+                    <img src="IMAGENES/ortografía.png" alt="">
+                </a>
+            </div>
+            <div class="img-letritas">
+                <img src="IMAGENES/letritas.png" alt="">
+            </div>
+        </div>
+        <div class="img-nota">
+            <img src="IMAGENES/nota.png" alt="" width="100%">
         </div>
     </body>
 </html>

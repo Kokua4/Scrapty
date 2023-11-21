@@ -1,9 +1,3 @@
-<%-- 
-    Document   : principal
-    Created on : 7 nov. 2023, 12:31:22
-    Author     : Alumno
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
