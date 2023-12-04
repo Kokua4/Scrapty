@@ -40,7 +40,7 @@
 
             // Mostrar un mensaje de éxito y redirigir a la página de inicio
             out.println("<p>Bienvenido " + nombrePG + "!</p>");
-            response.sendRedirect("principal.jsp");
+            response.sendRedirect("carruselOpc.jsp");
         } else {
             /*if (rs2.next()) {
             // Guardar el id del usuario en la sesión
@@ -80,4 +80,3 @@
         }
     }
 %>
-

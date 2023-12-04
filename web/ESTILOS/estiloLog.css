@@ -143,6 +143,36 @@ button {
     transition: all 0.5s ease;
 }
 
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.mostrar-contrasenia{
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: 30px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 6px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.validar{
+    width: 360px;
+    height: 20px;
+    margin: 0 30px;
+}
+.valida{
+    width: 360px;
+    height: 20px;
+    color: #fff;
+}
+
 /* Responsivo para pantallas de PC */
 
 @media (max-width: 1200px) {

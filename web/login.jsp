@@ -18,52 +18,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="ESTILOS/estiloLog.css">
-        <script>
-            function mostrarContrasenia() {
-                var contraseniaInput = document.getElementById("password");
-                var botonMostrar = document.getElementById("mostrar-contrasenia");
-                if (contraseniaInput.type === "password") {
-                    contraseniaInput.type = "text";
-                    botonMostrar.textContent = "👁️";
-                } else {
-                    contraseniaInput.type = "password";
-                    botonMostrar.textContent = "👁️";
-                }
-            }
-        </script>
+        <title>Iniciar Sesión</title>
     </head>
     <body>
         <section>
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"class="logo"><img src="IMAGENES/Logo.png" width="200"/></a>
+                    <a href="index.html">
+                        <img src="IMAGENES/Logo.png" width="200"/>
+                    </a>
                 </div>
+            </div>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="login2.jsp">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <input type="text" name="user" required onkeypress="return valnomusu(event)">
+                        <label>Nombre de usuario</label>
+                    </div>
+                    <div class="inputbox">
+                        <button  type="button" class="mostrar-contrasenia" id="mostrar-contrasenia1" onclick="mostrarContraseña(1)">👁️</button><ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" id="password" required onkeyup="ojo(1)">
+                        <label>Contraseña</label>
+                    </div>
+                    <button onclick="location.href = 'login2.jsp'">Inicio</button>
+                    <div class="register">
+                        <p>¿No tienes cuenta? <a href="registro.jsp ">Registrate</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-            </div>
-            <div class="form-box">
-                <div class="form-value">
-                    <form action="login2.jsp">
-                        <h2>Login</h2>
-                        <div class="inputbox">
-                            <ion-icon name="mail-outline"></ion-icon>
-                            <input type="text" name="user" required>
-                            <label>Usuario</label>
-                        </div>
-                        <div class="inputbox">
-                            <ion-icon name="lock-closed-outline"></ion-icon>
-                            <input type="password" name="password" required>
-                            <label>Contraseña</label>
-                        </div>
-                        <button onclick="location.href = 'login2.jsp'">Inicio</button>
-                        <div class="register">
-                            <p>¿No tienes cuenta? <a href="registro.jsp ">Registrate</a></p>
-                            <p>¿Eres administrador? <a href="loginAdmin.jsp ">Ingresar</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </body>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="infoMetodos.js"></script>
+    <script type="text/javascript" src="validaciones.js"></script>
+</body>
 </html>
