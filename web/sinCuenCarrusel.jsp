@@ -39,7 +39,7 @@
                         </div>
                         <div class="column-right">
                             <a href="sinCuenopcLT.jsp">
-                            <img src="IMAGENES/ortografíaa.png" width="100%">
+                            <img src="IMAGENES/ortografia.png" width="100%">
                             </a>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             <h4>Da click en el libro para empezar.</h4>
                         </div>
                         <div class="column-right">
-                            <a href="opcionesLT.jsp">
+                            <a href="brailleProx.jsp">
                                 <img src="IMAGENES/braillee.png" width="100%">
                             </a>
                         </div>

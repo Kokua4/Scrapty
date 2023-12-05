@@ -44,7 +44,7 @@
                     </div>
                     <div class="column-right">
                         <a href="opcionesLT.jsp">
-                            <img src="IMAGENES/ortografíaa.png" width="100%">
+                            <img src="IMAGENES/ortografia.png" width="100%">
                         </a>
                     </div>
                 </div>

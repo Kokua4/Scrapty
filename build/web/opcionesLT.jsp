@@ -42,7 +42,7 @@
                     </p>
                 </div>
                 <div class="header-img">
-                    <img src="IMAGENES/ortografíaa.png" alt="">
+                    <img src="IMAGENES/ortografia.png" alt="">
                 </div>
             </div>
         </header>
