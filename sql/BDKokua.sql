@@ -29,7 +29,7 @@ contenidoLectura text
 create table publicoG(
 idPG INT AUTO_INCREMENT PRIMARY KEY,
 nombrePG varchar(100),
-contraseña varchar(20),
+contraseña varchar(1000),
 correoPG varchar(100)
 );
 
