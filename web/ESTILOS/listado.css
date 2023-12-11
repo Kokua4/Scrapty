@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+.container {
+    position: absolute;
+    padding: 10px;
+    background-color: #333;
+    margin-left: 5%;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: 2;
+}
+
+.form-box {
+    position: relative;
+    width: 820px;
+    height: 380px;
+    top: 30px;
+    background: transparent;
+    border: 2px solid rgba(173, 216, 230, 0.8); /* Color azul claro */
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000; /* Color verde oscuro */
+}
+
+.container .logo {
+    text-decoration: none;
+    color: white;
+
+}
+
+.kokua {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-box {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bordered-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bordered-table th, .bordered-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Añadido para crear los bordes */
+}
+
+.bordered-table th {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: #333;
+}
+
+a:hover {
+    color: #007bff;
+}

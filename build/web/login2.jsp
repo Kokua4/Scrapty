@@ -8,14 +8,14 @@
     String nombrePG = request.getParameter("user");
     String contrasena = request.getParameter("password");
 
+    ResultSet rs = null;
     Connection con = null;
     PreparedStatement ps = null;
-    ResultSet rs = null;
 
     try {
         // Conectar a la base de datos MySQL "kokua"
         conectadita conecta = new conectadita();
-        con = conecta.getConnection(request.getServerName());
+        con = conecta.getConnection();
 
         // Crear la sentencia preparada SQL para buscar un usuario con el nombre especificado
         String query = "SELECT * FROM publicoG WHERE nombrePG = ?";
@@ -30,13 +30,13 @@
             // Verificar la contraseña utilizando BCrypt
             String hashedPasswordDB = rs.getString("contraseña");
 
-            if (BCrypt.checkpw(contrasena, hashedPasswordDB)) {
+            if (contrasena.equals(hashedPasswordDB)) {
                 // Guardar el nombre del usuario en la sesión
                 session.setAttribute("nombrePG", nombrePG);
 
                 // Mostrar un mensaje de éxito y redirigir a la página de inicio
                 out.println("<p>Bienvenido " + nombrePG + "!</p>");
-                response.sendRedirect("carruselOpc.jsp");
+                response.sendRedirect("listado.jsp");
             } else {
                 // Mostrar un mensaje de error y volver a la página de inicio de sesión
                 out.println("<p>Contraseña incorrecta.</p>");

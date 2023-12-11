@@ -39,10 +39,8 @@ public class conectadita implements Serializable {
         }
     }
 
-    public Connection getConnection(String url) {
-        if (url != null && url.contains(".gerdoc.")) {
-            return getConnection(USER, PASSWORD, DB, "localhost");
-        }
+    public Connection getConnection() {
+        
         return getConnection(USER, PASSWORD1, DB, "localhost");
     }
 

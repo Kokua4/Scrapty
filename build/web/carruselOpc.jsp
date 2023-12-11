@@ -21,6 +21,7 @@
             </div>
             <div class="nav-items">
                 <a href="login.html" id="perfilLink">Perfil</a>
+                <a href="chatuser.jsp" id="soporteUser">SoporteUser</a>
                 <a href="#" id="cerrarSesion">Cerrar Sesión</a>
             </div>
         </nav>

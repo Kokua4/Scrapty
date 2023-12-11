@@ -20,11 +20,13 @@
         String hashedPassword = BCrypt.hashpw(contrasenia, BCrypt.gensalt());
 
         // Crear la sentencia preparada SQL
-        String query = "INSERT INTO publicoG (nombrePG, contraseña, correoPG) VALUES (?, ?, ?)";
+        String query = "INSERT INTO publicoG (nombrePG, contraseña, correoPG, idTipoUsuario) VALUES (?, ?, ?, ?)";
         ps = con.prepareStatement(query);
         ps.setString(1, usuario);
         ps.setString(2, hashedPassword);
         ps.setString(3, correo);
+        ps.setInt(4, 2);
+        
 
         // Ejecutar la sentencia preparada y obtener el número de filas afectadas
         int numRows = ps.executeUpdate();

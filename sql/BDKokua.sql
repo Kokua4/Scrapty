@@ -30,15 +30,27 @@ create table publicoG(
 idPG INT AUTO_INCREMENT PRIMARY KEY,
 nombrePG varchar(100),
 contraseña varchar(1000),
-correoPG varchar(100)
+correoPG varchar(100),
+idTipoUsuario int(10)
 );
 
 create table administrador(
 idAdmin INT AUTO_INCREMENT PRIMARY KEY,
 nombreAdmin varchar(100),
 correoAdmin varchar(100),
-contraAdmin varchar(20)
+contraAdmin varchar(20),
+idTipoUsuario int(10)
 );
+
+create table mensajes(
+id_mens int auto_increment primary key not null,
+mensaje text,
+hora_men datetime,
+usuario_envia nvarchar(50),
+tipo_usuario int,
+idPG int
+);
+
 
 create table leccionesPG(
 idLeccionesPG INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,4 +76,12 @@ FOREIGN KEY (idPG) REFERENCES publicoG(idPG),
 FOREIGN KEY (idAdmin) REFERENCES administrador(idAdmin)
 );
 
+
+insert into publicoG values(1, "Jero", "2341", "jero.@gmail.com",  1);
+insert into publicoG values(2, "Mel","3412", "mel.@gmail.com", 1);
+insert into publicoG values(3, "Jaque","4123", "jaque.@gmail.com", 1);
+insert into publicoG values(4, "Nani", "1234","nani.@gmail.com", 1);
+
+
 select * from publicoG;
+select * from mensajes;
