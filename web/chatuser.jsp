@@ -77,7 +77,7 @@
             <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
             <script>
                                 //En localhost poner la ip de la compu
-                                var socket = new WebSocket("ws://40.86.11.134:8080/WebApplication2/chat/gerdoc");
+                                var socket = new WebSocket("ws://localhost:8080/WebApplication2/chat/gerdoc");
 
 
                                 socket.onopen = function (event) {
