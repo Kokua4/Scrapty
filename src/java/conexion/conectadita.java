@@ -9,7 +9,7 @@ public class conectadita implements Serializable {
     private static final String PASSWORD = "1234";
     private static final String PASSWORD1 = "n0m3l0";
     private static final String DB = "kokua";
-    private static final String PORT = "3308";
+    private static final String PORT = "3306";
 
     public boolean testDriver() {
         try {
