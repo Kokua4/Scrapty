@@ -14,7 +14,7 @@
         // Cargar el driver de MySQL
         Class.forName("com.mysql.jdbc.Driver");
         // Conectar a la base de datos MySQL "mydatabase"
-        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kokua?autoReconnect=true&useSSL=false", "root", "1234");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3308/kokua?autoReconnect=true&useSSL=false", "root", "1234");
 
         // Hashear la contraseña con BCrypt
         String hashedPassword = BCrypt.hashpw(contrasenia, BCrypt.gensalt());
