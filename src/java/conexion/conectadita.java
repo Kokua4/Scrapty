@@ -41,7 +41,7 @@ public class conectadita implements Serializable {
 
     public Connection getConnection() {
         
-        return getConnection(USER, PASSWORD1, DB, "localhost");
+        return getConnection(USER, PASSWORD, DB, "localhost");
     }
 
     public void closeConnection(Connection connection) {
